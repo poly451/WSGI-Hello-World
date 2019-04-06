@@ -11,17 +11,4 @@ def application(environ, start_response):
 
     return [output]
     
-# The following goes in your httpd.conf file (/etc/httpd/conf/httpd.conf -- or something like that!)
-# If you're not sure where it is, try: $sudo find / -name "httpd.conf"
 
-WSGIScriptAlias /myapp /var/www/wsgi-scripts/myapp.wsgi
-
-<Directory "var/www/wsgi-scripts">
-<IfVersion < 2.4>
-  Order allow,deny
-  Allow from all
-</IfVersion>
-<IfVersion >= 2.4>
-  Require all granted
-</IfVersion>
-</Directory>
