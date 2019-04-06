@@ -11,4 +11,5 @@ def application(environ, start_response):
 
     return [output]
     
-
+# To run this: http://45.293.23.34/myapp
+# More generally: http://[insert ip]/myapp
